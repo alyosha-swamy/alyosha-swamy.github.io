@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="blog-index">
+    <h1>Tensoic Blog</h1>
+    {{ range .Pages }}
+    <article class="blog-post-summary">
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <time>{{ .Date.Format "January 2, 2006" }}</time>
+        <p>{{ .Summary }}</p>
+        <a href="{{ .Permalink }}" class="read-more">Read More</a>
+    </article>
+    {{ end }}
+</section>
+{{ end }}
